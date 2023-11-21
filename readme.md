@@ -10,13 +10,16 @@ Cette API GraphQL permet de gérer une liste de jeux vidéo, d'éditeurs et de s
 Configurer la base de données :
 
 Créer une base de données MySQL.
-Copier le fichier .env.example en .env et configurer les paramètres de base de données.
-Exécuter les migrations :
+Exécuter les scripts dans le fichier apigraphqljeux.sql
 
-bash
-Copy code
-php artisan migrate
-Endpoints GraphQL
+mettre àn jour les information de connexion à votre base de données dans le fichier src/database/baseDeDonnee.php
+    private $host = 'localhost';
+    private $db = 'apigraphqljeux';
+    private $user = 'root';
+    private $pass = '';
+
+
+Endpoints GraphQL http://Ip_de_votre_serveur/ApiGestionJeux
 L'API expose les points d'entrée suivants :
 
 Récupérer la liste des jeux
