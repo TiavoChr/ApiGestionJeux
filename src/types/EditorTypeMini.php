@@ -4,16 +4,18 @@ use GraphQL\Type\Definition\Type;
 use GraphQL\Type\Definition\ObjectType;
 use GraphQL\Type\Definition\ResolveInfo;
 
-class InfosType extends ObjectType
+class EditorTypeMini extends ObjectType
 {
     public function __construct()
     {
         parent::__construct([
-            'name' => 'Infos',
+            'name' => 'Editor',
             'fields' => [
-                'count' => Type::int(),
-                'pages' => Type::int(),
+                'id' => Type::id(),
+                'name' => Type::nonNull(Type::string()),
             ],
         ]);
     }
+
+    
 }

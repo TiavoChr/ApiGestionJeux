@@ -81,7 +81,7 @@ INSERT INTO `games` (`id`, `name`, `publication_date`, `genre`, `platform`) VALU
 (2, 'The Elder Scrolls V: Skyrim', 20111111, 'Action RPG', 'PlayStation, Xbox, PC'),
 (3, 'Call of Duty: Modern Warfare', 20191025, 'First-Person Shooter', 'PlayStation, Xbox, PC'),
 (4, 'Final Fantasy XV', 20161129, 'Action RPG', 'PlayStation, Xbox, PC'),
-(5, 'Assassin\'s Creed Odyssey', 20181005, 'Action RPG', 'PlayStation, Xbox, PC'),
+(5, 'Assassin s Creed Odyssey', 20181005, 'Action RPG', 'PlayStation, Xbox, PC'),
 (6, 'Fallout 4', 20151110, 'Action RPG', 'PlayStation, Xbox, PC'),
 (7, 'Resident Evil Village', 20210507, 'Survival Horror', 'PlayStation, Xbox, PC'),
 (8, 'The Witcher 3: Wild Hunt', 20150519, 'Action RPG', 'PlayStation, Xbox, PC'),

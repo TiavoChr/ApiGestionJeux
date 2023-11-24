@@ -24,13 +24,12 @@ class StudioRepository
         return $this->db->fetch($stmt);
     }
 
-    public function getStudiosByGameId($gameId)
+    public function getGamesByStudioId($studioId)
     {
-        $sql = "SELECT s.* FROM studios s
-                JOIN game_studios gs ON s.id = gs.studio_id
-                WHERE gs.game_id = :gameId";
-
-        $params = [':gameId' => $gameId];
+        $sql = "SELECT g.* FROM games g
+                JOIN game_studios gs ON g.id = gs.game_id
+                WHERE gs.studio_id = :studioId";
+        $params = [':studioId' => $studioId];
         $stmt = $this->db->executeQuery($sql, $params);
         return $this->db->fetchAll($stmt);
     }

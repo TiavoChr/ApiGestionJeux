@@ -9,7 +9,7 @@ class EditorRepository
         $this->db = $db;
     }
 
-    public function getEditors()
+    public function getEditors($page = 100)
     {
         $sql = "SELECT * FROM editors";
         $stmt = $this->db->executeQuery($sql);
@@ -24,13 +24,12 @@ class EditorRepository
         return $this->db->fetch($stmt);
     }
 
-    public function getEditorsByGameId($gameId)
+    public function getGamesByEditorId($editorId)
     {
-        $sql = "SELECT e.* FROM editors e
-                JOIN game_editors ge ON e.id = ge.editor_id
-                WHERE ge.game_id = :gameId";
-
-        $params = [':gameId' => $gameId];
+        $sql = "SELECT g.* FROM games g
+                JOIN game_editors ge ON g.id = ge.game_id
+                WHERE ge.editor_id = :editorId";
+        $params = [':editorId' => $editorId];
         $stmt = $this->db->executeQuery($sql, $params);
         return $this->db->fetchAll($stmt);
     }
